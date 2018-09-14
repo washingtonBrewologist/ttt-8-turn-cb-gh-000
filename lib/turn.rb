@@ -33,11 +33,11 @@ def move(board, index, player_char = "X")
   return board
 end
 
-def turn(board, index, player_char = "X")
+def turn(board)
   puts "Please enter 1-9:"
   selection = gets.chomp
   index = input_to_index(selection)
-  if valid_move?(board, index) == true
+  if valid_move?(board, index, player_char = "X") == true
     move(board)
     display_board(board)
   else
