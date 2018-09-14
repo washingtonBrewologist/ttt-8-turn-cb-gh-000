@@ -38,7 +38,7 @@ def turn(board)
   selection = gets.chomp
   index = input_to_index(selection)
   if valid_move?(board, index) == true
-    move(board)
+    move(board, index)
     display_board(board)
   else
     turn(board)
